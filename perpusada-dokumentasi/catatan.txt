@@ -1,0 +1,45 @@
+-Pembeli Buku
+-Produk Buku
+
+
+
+Backand 
+-node js
+-express
+-Body Parser
+-cors
+-mysql
+
+
+
+Cara membuat backend
+-buat folder
+-buka di visual studio code -> click kanan -> buka folder menggunkan vsc
+-buka terminal(gitbash)
+-npm -yv -> hasilnya package json
+-npm i express - body - parser mysql cosr
+
+database
+1.pembeli buku
+-id -> integer
+-nomor_anggota -> string
+-nama -> string
+-username ->string
+-password -> string
+-created_by -> tanggal
+-update -> tanggal
+
+2.Produk buku (nama tabel, produk)
+-id -> integer
+nomor_produk -> string
+halaman -> string
+judu_buku -> string
+gendre -> string
+tahun_terbit -> string
+penulis -> string
+harga ->
+isbn ->
+diskon ->
+created ->
+update ->
+
