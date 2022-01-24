@@ -1,0 +1,14 @@
+User register :
+- username (profile)
+- password (profile)
+- e-mail (profile)
+- gmail / google
+- facebook
+- twitter
+
+User story :
+- login
+- register 
+- beli buku (bayar, keranjang, 3rd api)
+- searching
+- filter profille
