@@ -1,16 +1,15 @@
 -Pembeli Buku
 -Produk Buku
 
-
-
 Backand 
 -node js
 -express
 -Body Parser
 -cors
--mysql
+-mysq
 
-
+DATABASE
+========
 
 Cara membuat backend
 -buat folder
@@ -19,15 +18,20 @@ Cara membuat backend
 -npm -yv -> hasilnya package json
 -npm i express - body - parser mysql cosr
 
-database
-1.pembeli buku
--id -> integer
--nomor_anggota -> string
--nama -> string
--username ->string
--password -> string
--created_by -> tanggal
--update -> tanggal
+TABEL DATABASE
+==============
+
+1. User/Pembeli
+	nama tabel : user
+	Query : 
+		- id INT NOT NULL AUTO INCREMENT Primary Key
+		- id INT NOT NULL AUTO INCREMENT Primary Key
+		- username VARCHAR (255) NOT NULL
+		- email VARCHAR(255) NOT NULL
+		- password VARCHAR(255) NOT NULL
+		- nama VARCHAR(255)
+		- role VARCHAR(255)
+		- created_at TIMESTAMP - updated_at TIMESTAMP
 
 2.Produk buku (nama tabel, produk)
 -id -> integer
@@ -37,7 +41,7 @@ judu_buku -> string
 gendre -> string
 tahun_terbit -> string
 penulis -> string
-harga ->
+harga -> int
 isbn ->
 diskon ->
 created ->
