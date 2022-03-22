@@ -17,7 +17,7 @@ const bodyParser = require('body-parser');
 
 // Import Router
 const {router} = require('./router/router');
-const {bookRouter} = require('./router/BookRouter');
+
 
 // Initializition PORT
 const port = process.env.PORT || 3000;
@@ -31,7 +31,6 @@ app.use(cors(originOptionCors));
 
 // Routing
 app.use('/', router);
-app.use('/books', bookRouter);
 
 // Port Connection
 app.listen(port, () => `connect to server on port ${port}`)

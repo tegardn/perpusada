@@ -7,10 +7,10 @@
 
 class Controller {
     static Homepage(req, res) {
-        res.send('Hello ini Controller Prima');
+        res.send('Hello ini Controller tegar');
     }
 }
 
 module.exports = {
-    Controller
+    Controller,
 };

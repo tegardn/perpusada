@@ -2,15 +2,25 @@
 
 /**
  * Class Declaration
- * Module Export Class
+ * Write Export Class
+ * Add model to Controller
+ * Mobile Export class
  */
+
+const { Book } = require ('../model/Book');
 
 class BookController {
     static FindAllBooks(req, res) {
-        res.send('Hello ini BookController Tegar');
+        Book.showAllBooks((err, data) => {
+            if(err) {
+                console.log('Controller eror');
+            } else {
+                console.log('data', data);
+            }
+        })
     }
 }
 
 module.exports = {
-    BookController
+    BookController,
 };
