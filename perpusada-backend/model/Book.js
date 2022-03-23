@@ -27,10 +27,63 @@ class Book {
                 console.log('this is Err => /n', err);
                 result(err, null)
             } else {
-                console.log('result', res);
-                result(null, res);
+                let rawData = res;
+                let books = [];
+                let book;
+                rawData.forEach((eachData) => {
+                    book = new Book(
+                        eachData.ID,
+                        eachData.book_label,
+                        eachData.book_tittle,
+                        eachData.book_author,
+                        eachData.book_genre,
+                        eachData.book_publisher,
+                        eachData.book_isbn,
+                        eachData.book_year,
+                        eachData.book_price,
+                        eachData.book_stock,
+                        eachData.created_at,
+                        eachData.updated_at,
+                    );
+                    books.push(book);
+                });
+
+                console.log('result', books);
+                result(null, books);
             }
         });
+    }
+    static showBookById(id, result) {
+        let sqlQuery = `SELECT * FROM book WHERE ID = ${id}`;
+        sql.query(sqlQuery, (err, res) => {
+            if (err) {
+                console.log(' error =>, err');
+                result(err, null);
+            } else {
+                let rawData = res;
+                let books = [];
+                let book;
+                rawData.forEach((eachData) => {
+                    book = new Book(
+                        eachData.ID,
+                        eachData.book_label,
+                        eachData.book_tittle,
+                        eachData.book_author,
+                        eachData.book_genre,
+                        eachData.book_publisher,
+                        eachData.book_isbn,
+                        eachData.book_year,
+                        eachData.book_price,
+                        eachData.book_stock,
+                        eachData.created_at,
+                        eachData.updated_at,
+                    );
+                    books.push(book)
+                });   
+                console.log('result', res);
+                result(null, books);
+            }
+        })
     }
 }
     

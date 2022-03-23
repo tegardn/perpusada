@@ -14,6 +14,8 @@ const {bookRouter} = require('./BookRouter');
 
 // Endpoint : Home
 router.get('/', Controller.Homepage);
+
+// EndPoint Book
 router.use('/books', bookRouter);
 
 // export module

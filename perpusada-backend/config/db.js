@@ -11,7 +11,7 @@
 const mysql = require('mysql')
 
 // Import DB Config
-const DBConfig = require('../config/db.config');
+const DBConfig = require('./db.config');
 
 // Create Connection to Database
 const connectDB = mysql.createConnection({
